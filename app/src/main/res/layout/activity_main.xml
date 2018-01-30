@@ -6,9 +6,15 @@
     android:layout_height="match_parent"
     tools:context="igorr.fragments7.MainActivity">
 
-    <fragment
-        android:id="@+id/fragmentRegistration"
-        android:name="igorr.fragments7.fragments.FragmentRegistration"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/frame">
+
+        <fragment
+            android:id="@+id/frameContent"
+            android:name="igorr.fragments7.fragments.FragmentRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>
