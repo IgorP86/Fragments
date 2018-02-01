@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Fragments7</string>
+    <string name="title">Авторизация</string>
+    <string name="recive_sms">Вам отправлено SMS с кодом</string>
+    <string name="iAgree">Я принимаю пользовательское соглашение</string>
+    <string name="toComeIn">Войти</string>
+    <string name="contacts">Контакты</string>
+    <string name="photo">photo</string>
+    <string name="name">Name</string>
+    <string name="number">number</string>
 </resources>

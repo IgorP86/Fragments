@@ -10,16 +10,6 @@
         android:id="@+id/frameContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <fragment
-            android:id="@+id/fragRegistration"
-            android:name="igorr.fragments7.fragments.FragmentRegistration"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout="@layout/fragment_registration" />
-
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
