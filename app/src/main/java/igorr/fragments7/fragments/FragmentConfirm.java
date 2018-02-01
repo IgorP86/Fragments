@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -91,21 +93,21 @@ public class FragmentConfirm extends Fragment {
     @OnClick(R.id.btnComeIn)
     protected void onClickComeIn() {
         if ((tvSecretCode.getText().toString().isEmpty())) {
+            Toast toast = Toast.makeText(this.getContext(), "Ошибка: пустое поле", (Toast.LENGTH_SHORT));
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        } else {
             Snackbar.make(this.view, "Я молодец!", Snackbar.LENGTH_SHORT).addCallback(
                     new Snackbar.Callback() {
                         @Override
                         public void onDismissed(Snackbar snackbar, int event) {
                             super.onDismissed(snackbar, event);
                             if (event == Snackbar.Callback.DISMISS_EVENT_TIMEOUT) {
-                                Log.d("event", "DISMISS_EVENT_TIMEOUT");
+                                Log.d("Snackbar", "DISMISS_EVENT_TIMEOUT");
                                 actionListener.switchToNextFragment();
                             }
                         }
                     }).show();
-        } else {
-/*            Toast toast = Toast.makeText(getApplicationContext(), "Ошибка: пустое поле", (Toast.LENGTH_SHORT));
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();*/
         }
     }
 }
